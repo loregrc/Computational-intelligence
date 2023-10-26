@@ -9,6 +9,6 @@ Hi, I'm Lorenzo Greco (s306112) and this is my works from the Computational inte
 For solving the labs, and thus the implementation of all the algorithms, I collaborated with:
 
 - Luca Barbato s320213
-- Giuseppe Roberto Allegra
+- Giuseppe Roberto Allegra s305063
 
 That being said, I am fully responsible and aware of all the code uploaded to the repository.
