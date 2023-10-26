@@ -55,6 +55,4 @@ while not goal_check(current_state):
         frontier.put((f(new_state), new_state))
     _, current_state = frontier.get()
 
-print(
-    f"Solved in {steps:,} steps ({len(current_state.taken)} tiles)"
-)
+print(f"Solved in {steps} steps ({len(current_state.taken)} tiles)")
