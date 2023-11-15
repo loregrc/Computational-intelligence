@@ -23,7 +23,7 @@ Finally, the simulation is executed. Players are trained against the optimal str
 
 At the end of the simulation, the best player from the last generation is selected. This best player has the honor of challenging, in a round of 1000 games, other strategies, including a rematch against the optimal strategy.
 
-## Considerazioni finali
+## Final Considerations
 Our strategy is far from being optimal, and being pseudo-random, it has a limited range of improvement.
 
 Conducting numerous tests and varying simulation parameters, both with small and large numbers, we observed that it always starts with a win rate in the first generation of about 35%, evolving to a maximum of around 42%. There is an improvement. It improves very quickly, especially in the first five generations, reaching its maximum value and then stabilizing around that value.
