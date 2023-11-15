@@ -4,9 +4,11 @@ Hi, I'm Lorenzo Greco (s306112) and this is my works from the Computational inte
 # Content Overview
 1. Lab 1:
     - A* algorithm
+2. Lab 2:
+    - Evolutionary algorithm for Nim game
 
 # Note
-For solving the labs, and thus the implementation of all the algorithms, I collaborated with:
+For solving the labs, I collaborated with:
 
 - Luca Barbato s320213
 - Giuseppe Roberto Allegra s305063
