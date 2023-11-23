@@ -13,7 +13,7 @@ It is certainly not the optimal strategy, but, on the other hand, the optimal st
 The parent selection, as with many evolutionary algorithms, occurs through a tournament where the winner is chosen based on the 'fitness' parameter of their genome. The player is rewarded with one point for each won game.
 
 ## Crossover
-I due genitori hanno una probabilità pesata sulla loro fitness di trasmettere o meno un loro parametro del genoma al figlio.
+The two parents have a weighted probability in terms of their fitness to transmit or not transmit a specific genomic parameter to their child.
 
 ## Mutation
 Mutation occurs based on a mutation rate, typically very low. An attempt is made on each parameter of the genome independently. If the mutation occurs, the new parameter is always chosen randomly.
