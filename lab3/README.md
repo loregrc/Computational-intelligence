@@ -37,13 +37,13 @@ A higher number of population and generations corresponds to a higher best fitne
 Each point on the graph represents a combination of parameters (population size, generations, mutation rate, elitism percentage). Points in the bottom right represent the best combinations; in the top left, the worst.
 From numerous tests, it emerged that the best values for the mutation rate and elitism percentage parameters are around 0.001 and 0.1.
 
-![Instance 1](graphs/instance-1.png)
+![Instance 1](Graphs/instance-1.png)
 
-![Instance 2](graphs/instance-2.png)
+![Instance 2](Graphs/instance-2.png)
 
-![Instance 5](graphs/instance-5.png)
+![Instance 5](Graphs/instance-5.png)
 
-![Instance 10](graphs/instance-10.png)
+![Instance 10](Graphs/instance-10.png)
 
 ## Final Considerations
 After various tests with different evolutionary strategies that aimed to minimize fitness calls, we opted for this algorithm. Furthermore, reducing fitness calls too much seemed impractical without compromising the success of the best fitness too much.
