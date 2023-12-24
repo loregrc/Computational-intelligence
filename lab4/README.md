@@ -8,7 +8,7 @@ For the resolution of this laboratory, we started from the professor's strategy 
 
 # Experiments conducted
 
-## IA muoves first ( X )
+## IA moves first ( X )
 
 As we started, we focused on implementing the training model into the algorithm of an AI-controlled player.   
 The underlying idea is that a player should be able to find the best move for each position.  
@@ -29,8 +29,6 @@ From these results, we can assume that the AI has reached the highest possible l
 But winning doesn't necessarily mean making the best moves.  
 So, to be sure that it didn't make mistakes, we implemented the function that prints move by move the various states of a single game.  
 The tests performed, showed that every time the AI had the opportunity to win, it closed the game, confirming our hypothesis that it had now reached perfection.
-
-![image1](images/cell_meme.jpg)
 
 It may seem obvious, but it's not. With a low number of games during training, it could happen that, not exploring all possible combinations of moves sufficiently, it chose non-optimal moves while still winning. This happened to us with a number of games in the training phase equal to 100.000, prompting us to opt for a greater number of games, equal to 500.000 .
 
@@ -69,8 +67,6 @@ To ensure that once it drew, it wouldn't forget how it had done it, we introduce
 
 Passed this second training phase, O challenged X in search of its revenge.
 
-![image2](images/davide_contro_golia_meme.jpg)
-
 This second time, things went a bit differently...
 
 Statistics AI vs AI:  
@@ -89,9 +85,6 @@ It reamained to understand why it continued to lose some games.
 We gave ourselves the explanation that during the phase 1 of training, it couldn't explore all possible states in dept or couldn't face enough those few games it lost to memorize the counter-moves.
 
 Thus we designed the third phase of the training.
-
-![image3](images/here_we_go_again_meme.jpg)
-
 
 ### Training for O: Phase 3
 
@@ -134,6 +127,3 @@ After finishing our experiments, we thought it could be fun to challenge ourselv
 They are unbeatable...
 
 The few combinations that O fails to block are so rare and suboptimal that any human player would never play them, effectively being unable to beat the AIs (both with X and O) ever!
-
-The AIs right now:
-![image4](images/thanos3_meme.jpg)
