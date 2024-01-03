@@ -2,7 +2,6 @@
 These are my peer-reviews for the fourth lab.
 
 **To Thomas Baracco (s308722):**
-
 Hi Thomas,
 
 First of all, I want to tell you that I appreciated the idea of using a q-learning algorithm to train the agents.
@@ -23,7 +22,6 @@ I wish you the best for the exam, and good luck! Let's not give up now that we'r
 
 
 **To Silvio Chito (s309619):**  
-
 Hi Silvio,
 
 I want to start by saying that I appreciate your choice of using a q-learning algorithm.
@@ -42,5 +40,3 @@ I've already mentioned that I find the reward management system original, but is
 In conclusion, the lab has been completed, and there is evident effort on your part to customize and improve a generic q-learning algorithm, well done!
 
 I wish you good luck for the exam and your future exams!
-
-
