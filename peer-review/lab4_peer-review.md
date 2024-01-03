@@ -1,7 +1,7 @@
 # Lab4: Peer-review
 These are my peer-reviews for the fourth lab.
 
-**To Thomas Baracco (s308722):**
+**To Thomas Baracco (s308722):**  
 Hi Thomas,
 
 First of all, I want to tell you that I appreciated the idea of using a q-learning algorithm to train the agents.
