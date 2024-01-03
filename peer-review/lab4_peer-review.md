@@ -1,39 +1,46 @@
-# Lab3: Peer-review
-These are my peer-reviews for the third lab.
+# Lab4: Peer-review
+These are my peer-reviews for the fourth lab.
 
-**To Claudio Savelli (s317680):**  
-Hello Claudio, 
+**To Thomas Baracco (s308722):**
 
-First of all, I find it slightly challenging to provide a peer-review due to the amount of work involved.   
-Therefore, I will try to proceed in an organized manner.  
+Hi Thomas,
 
-In addition, you conducted two additional experiments (neural_network and valhalla) that are not included in the readme. Since they are not covered in the readme, I was unsure whether to evaluate them. Due to a lack of knowledge in neural networks and as they are not part of the lab assignment, I did not assess it (even if I had wanted to, I wouldn't have been able to at this time). Regarding the 'Valhalla' strategy, I read, studied, understood, and appreciated it, but it will not be the subject of this peer-review as it is not included in the readme.  
+First of all, I want to tell you that I appreciated the idea of using a q-learning algorithm to train the agents.
 
-I greatly appreciate providing different strategies to compare them.  
-In this case, you used three different strategies: a basic one, one with islands, and one with segregation in the islands.  
+The code itself is very clear and readable. The q-learning algorithm does its job, and it's appropriately commented.  
+Perhaps I would have preferred a greater separation between the game logic and the training logic, with comments in specific sections rather than inside the code, but these are personal preferences.
 
-As if that weren't enough, even in the basic one, you made an effort to provide multiple parent selection methods, mutation functions, and crossover functions. A in-depth study of this strategy, as you did, would have been enough to meet the requirements of the lab, but you went beyond; congratulations!  
-All these functions (parent selection, mutation, crossover) are well-written, efficient, and also very clever. Again, well done!  
+You have certainly fulfilled the requirements of the lab.  
+Maybe to make things more interesting, you could have done an analysis on the training parameters behaviour.  
+For example, how many games are needed to train your agent optimally, how positive and negative rewards influence the q-table, improving or worsening the training outcome.  
+It would have been interesting to see such a study with the appropriate results presented and explained clearly, perhaps with your reflection on the achieved results.  
+At the end of training, your agent has a winning rate of 90.88% against a random player; are the remaining games losses or draws? What would happen if it played second? What if two intelligent agents faced each other?...  
+These questions would be other good examples of analysis that you could have done.
 
-I don't know where you got the idea of islands and segregation; it took me a while to understand how they work, and I must say these are really interesting strategies! In this regard, I would have preferred more comments or sections of text explaining the idea behind these strategy rather than leaving all the effort at the discretion of the reader.  
+That being said, this doesn't take away from the fact that you've done an excellent job. You've implemented a good algorithm and achieved a satisfactory result. Congratulations!
 
-Other very interesting ideas you applied include dynamic mutation probability, with the respective diversity threshold, and the 'cooldown_time'. If I were to talk specifically about each one, I would never finish writing, so I'll just say I found them really clever additions!  
-Oh, I almost forgot, 'memoization': I really appreciate its implementation because it shows the effort to reduce the number of fitness calls, which was the lab's task, so nice job!  
+I wish you the best for the exam, and good luck! Let's not give up now that we're almost at the finish line!
 
-To be honest, I would have preferred a more in-depth analysis of the results, rather than just a table with all the results. Additionally, more explanations about the strategies used and how they function would have been beneficial. It might have been useful to test additional parameter configurations to evaluate further optimizations and better understand the algorithm's behavior in different conditions. Summing up and drawing conclusions about the strategies would have improved code understanding as well.  
 
-Overall, the code is well-structured and readable, but not so easy to understand, especially if you are not very comfortable with the strategies used. The results are clear, but further analysis and conclusions about them would not have hurt.  
+**To Silvio Chito (s309619):**  
 
-Well done, and good luck with the upcoming labs!
+Hi Silvio,
 
-**To Giacomo Fantino (s310624):**  
-Hi Giacomo,  
-First of all congratulations on your work!  
-Overall, your work is very clear, organized, and readable. I appreciate the effort you put into proposing different strategies for comparison: a simple evolutionary algorithm, one with diversity in parent selection, one with adaptability, and one with both diversity and adaptability.  
-Specifically, the mutation function, parent selection, and crossover functions are simple but non-trivial, and not too difficult to understand; but adding a few more comments on these functions might have improved overall readability and comprehension.  
-You focused extensively on comparing different strategies rather than explaining the strategies themselves and attempting to reduce fitness calls with a strategy.  
-The results are well presented and commented on, and the conclusions drawn are accurate and clear.  
-I appreciate the fact that you tested the algorithms over a high number of generations.  
-It would have been beneficial to have some additional analysis on how the different parameters influence the results, rather than keeping them static during the experiments.  
-In conclusion, I think you've done a good job. It's evident that you invested a lot of time and effort, and the result is satisfactory and aligned with the requirements of the assignment.  
-Good luck with the next labs!
+I want to start by saying that I appreciate your choice of using a q-learning algorithm.
+
+The code overall is readable and clear, well-commented where necessary, with a clear distinction between different sections and phases of the algorithm – good job!  
+I also appreciate the fact that there is a clear and concise README.  
+The decision to use a fixed probability for choosing actions at each state by exploiting the epsilon-greedy strategy makes sense and is commendable.
+
+One feature I particularly appreciate is the reward management system. Many, including myself, have relied on simple scores based on whether the player wins, draws, or loses. I find your implementation of rewards clever and original, compliments!
+
+The algorithm is implemented correctly, and for this reason, a more in-depth analysis of the results obtained would have been interesting.
+
+From the code, it's evident that the agent can be trained with both X and O. I appreciate the idea, but a comparison between the two cases would have been useful.  
+I've already mentioned that I find the reward management system original, but is it genuinely better than a more simplified version? Your agent achieves a 71% win rate against a random player; how many games does it lose or draw? It would have been interesting to analyze these aspects as well.
+
+In conclusion, the lab has been completed, and there is evident effort on your part to customize and improve a generic q-learning algorithm, well done!
+
+I wish you good luck for the exam and your future exams!
+
+
