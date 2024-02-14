@@ -29,7 +29,7 @@ This method implements the Minimax algorithm with alpha-beta pruning. It evaluat
 
 ***evaluate_state(self, game):***  
 This method evaluates the current state of the game and returns a score based on its convenience for the current player.  
-In particular, it returns 5 if the current player has won, -5 if the opponent has won, and otherwise calls the get_intermediate_state_evaluation function to obtain an intermediate evaluation of the game state.
+In particular, it returns 5 if the current player has won, -5 if the opponent has won, and otherwise calls the *get_intermediate_state_evaluation* function to obtain an intermediate evaluation of the game state.
 
 ***get_intermediate_state_evaluation(self, game)***
 
