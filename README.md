@@ -18,9 +18,11 @@ Hi, I'm Lorenzo Greco (s306112) and this is my works from the Computational inte
     - My report for this course
 
 # Note
-For solving the labs, I collaborated with:
+Labs has been made in collaboration with:
 
 - Luca Barbato s320213
 - Giuseppe Roberto Allegra s305063
+
+QUIXO has not been developed together but strategy has been discussed.
 
 That being said, I am fully responsible and aware of all the code uploaded to the repository.
