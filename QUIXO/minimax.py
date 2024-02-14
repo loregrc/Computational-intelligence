@@ -13,23 +13,35 @@ class MiniMaxPlayer(Player):
 
     def make_move(self, game: "Game") -> tuple[tuple[int, int], Move]:
 
+        best_points = float("-inf")
         best_move = None
         current_player = game.get_current_player()
         self.player = current_player
 
+        moves = get_possible_moves(game.get_board(), current_player)
+
         alpha = float("-inf")
         beta = float("inf")
 
-        board = deepcopy(game.get_board())
-        game_cloned = Game(board, game.get_current_player())
+        for move in moves:
 
-        _, best_move = self.minimax(game_cloned, self.max_depth, alpha, beta, True)
+            board = deepcopy(game.get_board())
+            game_cloned = Game(board, game.get_current_player())
+            game_cloned.move(move[0], move[1], current_player)
+
+            points = self.minimax(game_cloned, self.max_depth, alpha, beta, False)
+            if points > best_points:
+                best_points = points
+                best_move = move
+            alpha = max(alpha, best_points)
+            if beta <= alpha:
+                break
 
         # Return the best move, or a random move if no best move is found
         if best_move:
             return best_move
         else: 
-            return random.choice(get_possible_moves(game.get_board(), current_player))
+            return random.choice(moves)
 
     def minimax(self, game, depth, alpha, beta, findingMax):
         # Minimax algorithm with alpha-beta pruning
@@ -37,11 +49,10 @@ class MiniMaxPlayer(Player):
 
         if depth == 0 or game.check_winner() != -1:
             # Evaluate the game if it's at max depth or there is a winner
-            return self.evaluate_state(game), None
+            return self.evaluate_state(game)
 
         if findingMax:
             max_evaluation = float("-inf")
-            best_move = None
 
             #print(f'player MAXIMIZING:{current_player}')
 
@@ -50,20 +61,14 @@ class MiniMaxPlayer(Player):
                 game_cloned = game.clone()
                 game_cloned.move(move[0], move[1], current_player)
 
-                eval, _ = self.minimax(game_cloned, depth - 1, alpha, beta, False)
-
+                eval = self.minimax(game_cloned, depth - 1, alpha, beta, False)
+                max_evaluation = max(max_evaluation, eval)
                 alpha = max(alpha, eval)
                 if beta <= alpha:
                     break
-
-                if eval > max_evaluation:
-                    max_evaluation = eval
-                    best_move = move
-            return max_evaluation, best_move
-
+            return max_evaluation
         else:
             min_evaluation = float("inf")
-            best_move = None
 
             #Switching player to minimize opponent's state 
             current_player = (self.player + 1)%2
@@ -75,16 +80,12 @@ class MiniMaxPlayer(Player):
                 game_cloned = game.clone()
                 game_cloned.move(move[0], move[1], current_player)
 
-                eval, _ = self.minimax(game_cloned, depth - 1, alpha, beta, True)
-
+                eval = self.minimax(game_cloned, depth - 1, alpha, beta, True)
+                min_evaluation = min(min_evaluation, eval)
                 beta = min(beta, eval)
                 if beta <= alpha:
                     break
-                
-                if eval < min_evaluation:
-                    min_evaluation = eval
-                    best_move = move
-            return min_evaluation, best_move
+            return min_evaluation
 
     def evaluate_state(self, game):
 

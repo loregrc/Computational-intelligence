@@ -22,7 +22,7 @@ The Minimax algorithm is implemented in Quixo through the *MiniMaxPlayer* class,
 This class includes 3 methods in addition to the constructor: the method to make a move *(make_move)*, the method to run the recursive algorithm *(minimax)*, and the method to evaluate a game state *(evaluate_state)*.
 
 ***make_move(self, game: "Game") -> tuple[tuple[int, int], Move]:***  
-This method determines the best move for the current player using the Minimax algorithm with alpha-beta pruning. It calls the *minimax* function, which evaluates all possible moves recursively and returns the best calculated move.
+This method is called to choose the best move in the current state of the game. It performs a search of all possible valid moves for the player, and for each move, it invokes the Minimax algorithm with Alpha-Beta pruning up to the specified maximum depth and returns the best move found. If no better move is found, a random move among the possible ones is returned.
 
 ![make_move](Screenshots/make_move.png)
 
@@ -49,13 +49,13 @@ The Minimax Player has proven to be very skilled against Random:
 
 For a more accurate and truthful analysis, the Minimax Player starts the first half of matches as second and the second half as first.
 
-### Final Considerations
+### Considerations
 
-In Quixo, a Minimax Player is able to outperform a random player even with low algorithm depths like 2.
+In Quixo, a Minimax Player is able to outperform a random player even with low algorithm depth like 1.
 
 This is because even looking only a few moves ahead compared to an opponent who plays randomly allows you to ensure victory in most cases.
 
-Unfortunately, it fails to reach 100% victory.
+Most times even with a depth of 1, it manages to win 100% of the games. With depths greater than 1, it manages to win 100% of the games against Random.
 
 ### Bonus
 
