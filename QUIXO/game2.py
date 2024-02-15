@@ -2,6 +2,14 @@ from game import Move, Game, Player
 from copy import deepcopy
 from helping_functions import get_all_legal_moves
 
+# ANSI escape codes for colors
+GREEN = '\033[92m'  # Green color
+RED = '\033[91m'  # Red color
+RESET = '\033[0m'  # Reset color to default
+
+X_SYMBOL = 'X'  # X symbol
+O_SYMBOL = 'O'  # O symbol
+
 class Game2(Game):
     def __init__(self, board, current_player) -> None:
         super().__init__()
@@ -16,15 +24,31 @@ class Game2(Game):
         return Game2(board, self.current_player_idx)
     
     def print_board(self):
-        '''Prints the board. -1 are neutral pieces, 0 are pieces of player 0, 1 pieces of player 1'''
+        '''Prints the board with coordinates. -1 are neutral pieces, 0 are pieces of player 0, 1 pieces of player 1'''
+
+        # Print column numbers
+        print(" ", end=" ")
+        for x in range(len(self._board)):
+            print(x, end=" ")
+        print()  # New line
+
+        row_count = 0
+
         for row in self._board:
+            
+            # Print row number
+            print(row_count, end=" ")
+            row_count += 1
+
             for cell in row:
                 if cell == -1:
                     print("-", end=" ")
                 elif cell == 0:
-                    print("X", end=" ")
+                    # Print the X symbol in red
+                    print(RED+X_SYMBOL+RESET, end=" ")
                 elif cell == 1:
-                    print("O", end=" ")
+                    # Print the O symbol in green
+                    print(GREEN+O_SYMBOL+RESET, end=" ")
             print()  # Print a new line after each row
 
     def play(self, player1: Player, player2: Player) -> int:
@@ -42,9 +66,11 @@ class Game2(Game):
             while not ok:
                 from_pos, slide = players[self.current_player_idx].make_move(
                     self)
+                
                 ok = self.move(from_pos, slide, self.current_player_idx)
 
                 if ok:
+                    print(from_pos, slide)
                     self.print_board()
                     print()
 

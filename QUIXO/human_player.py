@@ -16,25 +16,25 @@ class HumanPlayer(Player):
 
         while True:
             try:
-                move_input = input("Enter your move (format: 'row column direction'): ")
+                move_input = input("Enter your move (format: 'COLUMN ROW direction'): ")
 
                 if keyboard.is_pressed('esc'):
                     raise KeyboardInterrupt
 
                 move_parts = move_input.split()
                 if len(move_parts) != 3:
-                    raise ValueError("Invalid input format. Please enter row, column, and direction separated by spaces.")
+                    raise ValueError("Invalid input format. Please enter COLUMN, ROW, and direction separated by spaces.")
                 
-                row = int(move_parts[0])
-                column = int(move_parts[1])
+                column = int(move_parts[0])
+                row = int(move_parts[1])
                 direction = Move[move_parts[2].upper()]
                 
-                if not game.is_valid_move(row, column, direction, current_player):
+                if not game.is_valid_move(column, row, direction, current_player):
                     print("Invalid move. Please try again.")
                     continue
                 
-                return (row, column), direction
+                return (column, row), direction
             except ValueError as ve:
                 print(ve)
             except KeyError:
-                print("Invalid direction. Please enter 'TOP', 'BOTTOM', 'LEFT', or 'RIGHT'.")
+                print("Invalid direction.")

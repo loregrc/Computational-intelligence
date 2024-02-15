@@ -6,6 +6,7 @@ def get_all_legal_moves(player, board, board_size=5):
     moves = []
 
     # Generate moves for corners, edges , etc of the board
+    
     for x in [0, board_size - 1]:
         for y in [0, board_size - 1]:
 
@@ -41,7 +42,7 @@ def get_all_legal_moves(player, board, board_size=5):
     for x in range(1, board_size - 1):
         for y in [0, board_size - 1]:
 
-            # Check if the move is legal (either an empty spot or the player's piece)
+            # Check if the move is legal
             if board[y][x] == player or board[y][x] == -1:
 
                 moves.append(((x, y), Move.RIGHT))
