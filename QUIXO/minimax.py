@@ -92,7 +92,7 @@ class MiniMaxPlayer(Player):
         winner = game.check_winner()
 
         if winner == self.player:
-            return 5 
+            return 5
         elif winner != -1:
             return -5
 

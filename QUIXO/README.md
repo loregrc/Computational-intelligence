@@ -59,7 +59,9 @@ Most times even with a depth of 1, it manages to win 100% of the games. With dep
 
 ### Bonus
 
-I have also implemented the ability to test your skills against AI or Random opponents, thanks to the *Human_Player* class which extends the *Player* class by overriding the *make_move* function.
+I have also implemented the ability to test your skills against AI or Random opponents, thanks to the *Human_Player* class which extends the *Player* class by overriding the *make_move* function and the possibility to see how AIs perform against each other.
+
+I didn't implement the tie case in the AI vs Random tests because Random is so bad that it's impossible to tie against it when AI plays. However, I did implement the possibility of a tie in the HumanPlayer vs AI, HumanPlayer vs Random and AI vs AI matches because in this case, the possibility exists. To prevent the algorithm from getting stuck, I inserted a move counter that, after reaching 100 moves, declares the tie.
 
 The games use *Game2*, which is a class that extends *Game*, providing functions to clone the game state, print the board with X and O instead of 1 and 0, and play interactively against other players, both as the first and second player.
 

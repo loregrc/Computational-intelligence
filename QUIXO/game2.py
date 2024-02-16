@@ -59,6 +59,7 @@ class Game2(Game):
         
         players = [player1, player2]
         winner = -1
+        move_counter = 0  # Counter for the number of moves
         while winner < 0:
             self.current_player_idx += 1
             self.current_player_idx %= len(players)
@@ -75,6 +76,8 @@ class Game2(Game):
                     print()
 
             winner = self.check_winner()
+            winner = self.check_tie(move_counter)
+            move_counter += 1  # Increment the move counter
         return winner
     
     def is_valid_move(self, row, column, direction, player):

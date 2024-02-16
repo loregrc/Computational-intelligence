@@ -83,11 +83,19 @@ class Game(object):
             # return the relative id
             return self._board[0, -1]
         return -1
+    
+    def check_tie(self, move_counter: int) -> bool:
+        '''Check if the game is a tie based on the move counter'''
+        if move_counter >= 100:
+            return 100
+        else:
+            return -1
 
     def play(self, player1: Player, player2: Player) -> int:
         '''Play the game. Returns the winning player'''
         players = [player1, player2]
         winner = -1
+        move_counter = 0  # Counter for the number of moves
         while winner < 0:
             self.current_player_idx += 1
             self.current_player_idx %= len(players)
@@ -97,6 +105,8 @@ class Game(object):
                     self)
                 ok = self.__move(from_pos, slide, self.current_player_idx)
             winner = self.check_winner()
+            winner = self.check_tie(move_counter)
+            move_counter += 1  # Increment the move counter
         return winner
 
     def __move(self, from_pos: tuple[int, int], slide: Move, player_id: int) -> bool:
