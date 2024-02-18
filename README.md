@@ -18,7 +18,7 @@ Hi, I'm Lorenzo Greco (s306112) and these are my works from the Computational in
     - My report for this course
 
 # Note
-Labs has been made in collaboration with:
+Labs have been made in collaboration with:
 
 - Luca Barbato s320213
 - Giuseppe Roberto Allegra s305063
