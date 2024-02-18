@@ -14,8 +14,6 @@ Hi, I'm Lorenzo Greco (s306112) and these are my works from the Computational in
     - All my peer-reviews from Lab2, Lab3, Lab4
 6. Quixo:
     - This project implements an artificial intelligence based on the Minimax algorithm with Alpha-Beta pruning to play Quixo
-7. Report:
-    - My report for this course
 
 # Note
 Labs have been made in collaboration with:
